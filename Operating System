@@ -54,25 +54,6 @@ Circular Wait (processes wait in a circular chain).
 
 Prevention: Break any condition. Example: Order resources → no circular wait.
 
-#Memory management:
-
-Stack vs Heap:
-
-Stack → local variables, function calls (fast, limited).
-Heap → dynamic memory allocation (malloc/new in C/Java).
-
-#Virtual Memory:
-
-Uses disk (swap space) as extension of RAM.
-Allows more programs to run than physical memory can hold.
-
-#Paging: Memory divided into fixed-size blocks (pages).
-
-#Segmentation: Memory divided into variable-size logical blocks (segments).
-
-#Why do we need virtual memory?
-To allow programs larger than RAM to run, and to provide isolation between processes.
-
 #File System Basics: 
 
 Purpose: Organizes data on storage devices.
