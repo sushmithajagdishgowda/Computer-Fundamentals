@@ -1,0 +1,181 @@
+Networking
+
+Basics of Networking
+
+#IP Addressing: An IP address is a unique identifier for a device on a network.
+
+Types:
+  IPv4:** 32-bit, looks like `192.168.1.1` (about 4 billion possible addresses).
+  IPv6:** 128-bit, looks like `2001:0db8:85a3::8a2e:0370:7334` (huge address space).
+
+Public vs Private IP:**
+  Public = accessible on the internet.
+  Private = used inside local networks (e.g., 192.168.x.x).
+
+Subnetting & CIDR:** Helps divide IP ranges into smaller networks.
+NAT (Network Address Translation):** Lets multiple devices in a private network share one public IP.
+
+#DNS (Domain Name System): Converts human-readable names (`google.com`) into IP addresses.
+Process:
+  1. You type `google.com`.
+  2. Browser asks DNS resolver → Root → TLD (.com) → Authoritative server.
+  3. Gets IP back (e.g., `142.250.190.14`).
+  4. Browser connects to that IP.
+
+Caching: Speeds things up by storing resolved addresses locally.
+
+#HTTP / HTTPS
+
+HTTP (HyperText Transfer Protocol):
+
+Rules for communication between browser (client) & server.
+Methods:
+    * `GET` → Retrieve data
+    * `POST` → Send data
+    * `PUT` → Update data
+    * `DELETE` → Remove data
+
+Status Codes:
+
+    * `200 OK`, `301 Redirect`, `404 Not Found`, `500 Server Error`.
+
+HTTPS:
+  * Same as HTTP but encrypted using **TLS/SSL**.
+  * Ensures confidentiality & integrity of data.
+
+#Client-Server Model
+Client: Requests resources (browser, mobile app).
+Server: Provides resources (web server, API server).
+Flow Example:
+You request `youtube.com` → Client sends HTTP request → Server responds with video data.
+
+Statelessness: HTTP doesn’t remember clients → requires **cookies/sessions to track users.
+
+#Core Networking Concepts**
+
+OSI Model (7 Layers)
+
+Framework describing how data flows in a network.
+
+1. Physical: Wires, signals, cables.
+2. Data Link: MAC addresses, Ethernet.
+3. Network: IP addresses, routing.
+4. Transport: TCP/UDP (reliability, segmentation).
+5. Session: Establish, manage connections.
+6. Presentation: Encryption, compression.
+7. Application: HTTP, DNS, SMTP.
+
+In practice, OSI is a theoretical model
+
+#TCP/IP Model (Practical Internet Model)
+
+1. Link Layer Hardware-level communication.
+2. Internet Layer: IP, routing.
+3. Transport Layer: TCP/UDP.
+4. Application Layer: HTTP, DNS, FTP, SMTP.
+
+#TCP vs UDP
+TCP (Transmission Control Protocol):
+
+  * Connection-oriented.
+  * Reliable, guarantees delivery & order.
+  * Used in: Web browsing, file transfer, email.
+
+UDP (User Datagram Protocol):
+
+  * Connectionless.
+  * Faster, but no guarantee of delivery/order.
+  * Used in: Gaming, video streaming, VoIP.
+
+#Ports & Protocols
+Port = door on a machine for communication.
+Examples:
+
+  * `80` → HTTP
+  * `443` → HTTPS
+  * `22` → SSH
+  * `25` → SMTP
+
+#Sockets: An endpoint for two-way communication between client & server.
+Example: Browser opens a socket to server IP:443 to fetch a website.
+
+#Routing & Switching
+
+#MAC vs IP Address
+
+MAC Address: Unique hardware ID of a network card (like a fingerprint).
+IP Address: Logical location in a network.
+Together: IP = "Where you are", MAC = "Who you are".
+
+#ARP (Address Resolution Protocol)
+
+Resolves IP address → MAC address.
+Example: Computer knows target IP, asks network: “Who has this IP?” → Device responds with its MAC.
+
+#Routers & Switches
+Router: Connects different networks, forwards packets to correct destination.
+Switch: Connects devices in the same local network, forwards using MAC.
+
+Packet Flow Example
+Laptop → Switch → Router → ISP → DNS Server → Target Server → Response back.
+
+#Advanced Networking Concepts**
+
+#Load Balancing
+
+* Distributes requests across multiple servers.
+* Prevents overload and improves performance.
+* Algorithms: Round Robin, Least Connections, IP Hash.
+
+#CDN (Content Delivery Network)
+
+* Distributed servers around the globe that cache content.
+* Example: Cloudflare, Akamai.
+* Reduces latency & speeds up websites.
+
+#Firewalls & Proxies
+
+Firewall: Blocks/filters unwanted traffic.
+Proxy: Acts as an intermediary.
+  Forward Proxy:** Client → Proxy → Internet.
+  Reverse Proxy:** Internet → Proxy → Server (e.g., Nginx).
+
+#VPN (Virtual Private Network)
+Creates a secure encrypted tunnel over public internet.
+Used for security, anonymity, bypassing geo-restrictions.
+
+#Networking in System Design / Software Engineering**
+
+REST vs GraphQL vs gRPC
+
+  * REST: Standard HTTP-based API.
+  * GraphQL: Flexible querying.
+  * gRPC: High-performance, uses HTTP/2 + Protocol Buffers.
+
+WebSockets:
+
+  * Full-duplex communication (real-time).
+  * Used in chat apps, live updates.
+
+Caching:
+
+  * Browser cache, CDN cache, Reverse proxy cache.
+  * Reduces load and speeds responses.
+
+Rate Limiting & Throttling:
+
+  * Protects servers from too many requests.
+
+DNS Load Balancing & Failover:
+
+  * Using DNS to distribute traffic between multiple servers.
+
+
+#WebSocket - It is a protocol that provides full-duplex (two-way) communication between a client (e.g., browser, mobile app) and a server over a single, long-lived connection.
+
+#API stands for Application Programming Interface.
+An API is a set of rules and protocols that allows different software applications to communicate with each other.
+Think of it as a messenger or bridge between two programs: it takes requests, processes them, and returns a response.
+
+
+
