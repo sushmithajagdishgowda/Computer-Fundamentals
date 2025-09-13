@@ -41,6 +41,25 @@ Primary vs Secondary Storage:
 Primary Storage: Directly accessible by CPU, volatile (RAM, cache).
 Secondary Storage: Non-volatile, permanent (HDD, SSD).
 
+#Memory management:
+
+Stack vs Heap:
+
+Stack → local variables, function calls (fast, limited).
+Heap → dynamic memory allocation (malloc/new in C/Java).
+
+#Virtual Memory:
+
+Uses disk (swap space) as extension of RAM.
+Allows more programs to run than physical memory can hold.
+
+#Paging: Memory divided into fixed-size blocks (pages).
+
+#Segmentation: Memory divided into variable-size logical blocks (segments).
+
+#Why do we need virtual memory?
+To allow programs larger than RAM to run, and to provide isolation between processes.
+
 Practice Questions:
 
 Why do we need cache memory if we already have RAM?
