@@ -1,0 +1,95 @@
+Operating System Fundamentals
+
+#Operating System : Software that manages hardware and software resources, and provides services to applications.
+
+#Roles of OS:
+
+Resource Manager (CPU, memory, I/O devices).
+Process Manager (runs programs efficiently).
+Memory Manager (allocates and frees memory).
+File Manager (stores and organizes data).
+Security & Access Control.
+
+#Process vs Thread
+
+Process:
+Independent program in execution.
+Has its own memory space (code, data, stack, heap).
+Example: Chrome browser, VS Code, Spotify.
+
+Thread:
+Smallest unit of execution inside a process.
+Shares memory with other threads in the same process.
+Example: In Chrome → one thread renders UI, another fetches network data.
+
+#Difference between process and thread?
+A process is an independent program with separate memory; a thread is a lightweight execution unit within a process that shares memory.
+
+#Context Switching: 
+Definition: Saving one process state and loading another. The OS switching CPU from one process/thread to another.
+Steps: Save current process state → Load next process state.
+Overhead: Takes time, so too many switches slow down system.
+
+#CPU Scheduling Algorithms:
+
+Scheduling decides which process runs when multiple are waiting.
+
+FCFS (First Come, First Serve): Run in order of arrival. (Fair, but may cause waiting).
+SJF (Shortest Job First): Run shortest task first. (Optimal avg. waiting time).
+Round Robin: Each process gets equal time slice (good for multitasking).
+Priority Scheduling: Higher-priority tasks run first.
+
+#Which scheduling algorithm is best for OS responsiveness?
+Round Robin, because it ensures fairness with time slices.
+
+#Deadlocks:
+Definition: A situation where processes wait forever for each other’s resources.
+
+Conditions for deadlock (must all be true):
+
+Mutual Exclusion (only one process can hold a resource).
+Hold & Wait (process holding a resource waits for another).
+No Preemption (resources can’t be forcibly taken).
+Circular Wait (processes wait in a circular chain).
+
+Prevention: Break any condition. Example: Order resources → no circular wait.
+
+#Memory management:
+
+Stack vs Heap:
+
+Stack → local variables, function calls (fast, limited).
+Heap → dynamic memory allocation (malloc/new in C/Java).
+
+#Virtual Memory:
+
+Uses disk (swap space) as extension of RAM.
+Allows more programs to run than physical memory can hold.
+
+#Paging: Memory divided into fixed-size blocks (pages).
+
+#Segmentation: Memory divided into variable-size logical blocks (segments).
+
+#Why do we need virtual memory?
+To allow programs larger than RAM to run, and to provide isolation between processes.
+
+#File System Basics: 
+
+Purpose: Organizes data on storage devices.
+Elements: Files, directories, metadata.
+Examples: NTFS (Windows), ext4 (Linux), FAT32 (older systems).
+
+#Basics of Concurrency & Synchronization
+
+Problem: Multiple processes/threads accessing shared data can cause race conditions.
+Solutions:
+Locks/Mutexes: Only one thread at a time.
+Semaphores: Counting mechanism for controlled access.
+Monitors/Condition Variables: Higher-level synchronization.
+
+#What is a race condition?
+When multiple threads access shared data without proper synchronization, leading to unpredictable results.
+
+
+
+
