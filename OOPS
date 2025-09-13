@@ -1,0 +1,142 @@
+OOPS : Object Oriented Programming Concepts
+
+#OOP is a programming paradigm that organizes code around objects rather than functions and logic.
+Objects = data + behavior.
+
+#Class and Object
+
+Class → Blueprint/template that defines properties (attributes/fields) and behaviors (methods/functions).
+Object → Instance of a class, a real-world entity created from the class.
+
+Example:
+class Car {
+    String brand;
+    int speed;
+
+    void drive() {
+        System.out.println("Car is driving...");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car c1 = new Car();   // Object
+        c1.brand = "Tesla";
+        c1.drive();
+    }
+}
+
+#Encapsulation (Data Hiding)
+
+Wrapping variables (fields) and methods (functions) into a single unit (class).
+Access controlled using access modifiers (private, public, protected).
+Getter & Setter methods are used to access private variables.
+
+Example:
+class BankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+
+#Abstraction (Hiding Implementation Details)
+
+Shows only essential details, hides background implementation.
+Achieved using abstract classes and interfaces.
+
+Example:
+abstract class Vehicle {
+    abstract void start();
+}
+
+class Bike extends Vehicle {
+    void start() {
+        System.out.println("Bike starts with key...");
+    }
+}
+
+#Inheritance (Code Reusability)
+
+One class acquires properties & behaviors of another class.
+Helps avoid redundancy.
+
+Types:
+Single, Multilevel, Hierarchical, Multiple (supported in some languages like C++, not directly in Java).
+
+Example:
+class Animal {
+    void sound() { System.out.println("Animal makes sound"); }
+}
+class Dog extends Animal {
+    void sound() { System.out.println("Dog barks"); }
+}
+
+#Polymorphism (Many Forms)
+
+Ability of an object to behave in multiple ways.
+
+Two types:
+Compile-time (Method Overloading) → Same method name, different parameters.
+Runtime (Method Overriding) → Child class redefines parent class method.
+Example:
+// Overloading
+class MathUtil {
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+
+// Overriding
+class Parent {
+    void greet() { System.out.println("Hello from Parent"); }
+}
+class Child extends Parent {
+    void greet() { System.out.println("Hello from Child"); }
+}
+
+#Constructor
+
+Special method used to initialize objects.
+Runs automatically when an object is created.
+
+class Student {
+    String name;
+    Student(String n) {
+        name = n;
+    }
+}
+
+#Method Overloading vs Overriding 
+Overloading → Same method, different parameters (compile-time).
+Overriding → Same method signature, child modifies parent behavior (runtime).
+
+#Access Modifiers
+
+public → Accessible everywhere.
+private → Accessible only inside class.
+protected → Accessible inside package + child classes.
+(default) → Package level access.
+
+#Final Keyword
+
+final class → cannot be inherited.
+final method → cannot be overridden.
+final variable → constant, cannot be reassigned.
+
+#Object Class Methods
+Every class in Java implicitly extends Object. Common methods:
+toString()
+equals()
+hashCode()
+
+Defenitions: 
+
+this Keyword - Refers to the current object of the class.
+super Keyword - Refers to the parent class object. Used to call parent class constructor/methods.
+Static Keyword - Belongs to the class, not to any specific object. Shared among all objects.
+Association: Relationship between two classes (e.g., Teacher – Student).
+Aggregation: "Has-A" weaker relationship (Car has an Engine).
+Composition: Strong "Has-A" relationship (House has Rooms – cannot exist without house).
