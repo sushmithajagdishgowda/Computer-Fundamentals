@@ -1,0 +1,79 @@
+Computer Fundamentals:
+
+#How a Computer Works: 
+CPU (Central Processing Unit): Executes program instructions. Think of it as the “brain” of the computer. The “brain” that executes instructions.
+Memory (RAM): Stores data/instructions temporarily while the program runs.
+Storage (Disk – HDD/SSD): Permanent data storage.
+Input/Output Devices (I/O): Allow communication. Input (keyboard, mouse) and Output (monitor, printer).
+
+NOTE: A computer executes programs by loading instructions from storage into memory, where the CPU processes them. Input/output devices allow interaction with the system.
+
+#Number Systems : A number system is a method for representing numbers using a set of symbols, or digits, with a defined base. 
+
+Binary (0/1): Computers work in binary because transistors have only two states (on/off). Machine language. Machine language.
+Decimal (0–9): Human number system. Human-readable.
+Hexadecimal (0–9, A–F): Used in memory addresses and debugging because it’s shorter than binary.
+
+#Compilers, Interpreters, Linkers
+
+Compiler: Translates entire source code → machine code before running (C, C++). Faster execution.
+Interpreter: Executes code line by line (Python, JavaScript). Slower but easier debugging.
+Linker: Combines compiled code with libraries to produce an executable program.
+
+Why do computers use binary?
+A: Computers use binary because transistors have two stable states (on/off), making binary the most efficient representation.
+
+#Memory & Storage
+
+RAM vs ROM
+
+RAM (Random Access Memory) is volatile, meaning data is lost when power is off. It is used for temporary storage of data and instructions currently being executed.
+ROM (Read-Only Memory) is non-volatile, storing permanent data like firmware and the bootloader.
+
+Cache Memory (L1/L2/L3):
+
+L1 Cache: Smallest, fastest, located inside CPU core.
+L2 Cache: Larger, slower, usually on the CPU chip but outside the core.
+L3 Cache: Largest, slower, shared across CPU cores.
+
+Primary vs Secondary Storage:
+
+Primary Storage: Directly accessible by CPU, volatile (RAM, cache).
+Secondary Storage: Non-volatile, permanent (HDD, SSD).
+
+Practice Questions:
+
+Why do we need cache memory if we already have RAM?
+Because RAM is still slower than CPU speed. Cache memory, built with faster SRAM and located closer to the CPU, stores frequently used instructions/data and reduces the CPU’s waiting time.
+
+What is virtual memory and why do we need it?
+Virtual memory uses a portion of the hard disk as an extension of RAM, allowing larger programs to run even if physical memory is limited.
+Implemented using paging or segmentation.
+If you have 8 GB RAM but run a program that needs 12 GB, the OS uses 4 GB of disk as virtual memory.
+
+What’s the difference between SRAM and DRAM?
+SRAM (Static RAM): Faster, expensive, used in cache. Stores data in flip-flops.
+DRAM (Dynamic RAM): Slower, cheaper, used in main memory. Stores data in capacitors and needs constant refreshing.
+
+What is the difference between HDD and SSD?
+HDD (Hard Disk Drive): Mechanical parts, slower read/write, cheaper.
+SSD (Solid State Drive): Flash memory, no moving parts, faster, more expensive.
+
+What is memory hierarchy?
+It’s the structure that shows memory types from fastest to slowest and smallest to largest:
+Registers → Cache → RAM → SSD/HDD → Tape Storage.
+
+What is the difference between stack memory and heap memory?
+Stack: Stores function calls and local variables, managed automatically, fast.
+Heap: Stores dynamically allocated objects, managed manually (in C/C++) or by garbage collector (in Java/Python).
+
+What are memory leaks?
+A memory leak happens when a program allocates memory in the heap but never releases it. Over time, this reduces available memory and slows down the system.
+Example: In C, using malloc() without free().
+
+
+
+
+
+
+
